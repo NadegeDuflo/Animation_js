@@ -1,0 +1,147 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    height:100vh;
+    margin: 0;
+    padding: 0;
+    background: #333;
+    font-family: 'Poppins';
+
+}
+
+a{
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Navigation */
+
+header{
+
+    width: 100%;
+    height: 100px;
+    margin-bottom: 30px;
+    border-bottom: 1px dashed #f1f1f1;
+    text-align: center;
+    padding: 5px 0;
+    
+}
+
+h1{
+    font-size: 30px;
+    color: #f1f1f1;
+    text-align: center;
+}
+.grid{
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-auto-rows: 200px;
+    grid-template-columns: repeat(auto-fit, 200px);
+    justify-content: center;
+    gap:10px;
+}
+.box {
+    height: 100%;
+    width: 100%;
+    background: #f1f1f1f1;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+ }
+
+/* Animation 1 carte focus zoom */
+
+
+
+.container-card-zoom {
+    position: relative;
+}
+
+.card-zoom {
+    width: 100px;
+    height: 150px;
+    background: pink;
+    flex-shrink: 0;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.image-zoom {
+    width: 100%;
+    height: 100%;
+    background-image: url('./ressources/bryan.jpg');
+    background-size: cover;
+    background-position: center;
+    transform: scale(1);
+}
+.bloc-focus-top, .bloc-focus-bottom {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    z-index: -1;
+}
+.bloc-focus-top {
+    background: #536976;
+    top: 0;
+    left: 0;
+}
+.bloc-focus-bottom {
+    background: #292E49;
+    bottom: 0;
+    right: 0;
+}   
+.bloc-content-show {
+    width: 100%;
+    height: 50px;
+    background-image: repeating-linear-gradient(90deg, hsla(57,0%,42%,0.09) 0px, hsla(57,0%,42%,0.09) 1px,transparent 1px, transparent 60px),repeating-linear-gradient(0deg, hsla(57,0%,42%,0.09) 0px, hsla(57,0%,42%,0.09) 1px,transparent 1px, transparent 60px),repeating-linear-gradient(0deg, hsla(57,0%,42%,0.09) 0px, hsla(57,0%,42%,0.09) 1px,transparent 1px, transparent 10px),repeating-linear-gradient(90deg, hsla(57,0%,42%,0.09) 0px, hsla(57,0%,42%,0.09) 1px,transparent 1px, transparent 10px),linear-gradient(90deg, rgb(20,20,20),rgb(20,20,20));
+    position: absolute;
+    z-index: 100;
+    bottom: 0;
+    color: #f1f1f1;
+    padding: 5px;
+    transform: translateY(50px);
+}
+.bloc-content-show h2 {
+    font-size: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-family: Montserrat, sans-serif;
+}
+.bloc-content-show h2 img {
+    width: 9px;
+}
+.bloc-content-show hr {
+    width: 20px;
+    height: 1px;
+    border-radius: 5px;
+    margin: 5px 0;
+    background: #f1f1f1;
+    border: none;
+}
+
+.bloc-content-show p {
+    font-family: Roboto, sans-serif;
+    margin: 5px 0;
+    font-size: 7px;
+    line-height: 1.4;
+}
+.bloc-content-show p span {
+    font-family: Montserrat, sans-serif;
+    font-weight: bold;
+}
+
+
+
+  
